@@ -1,0 +1,5 @@
+# utils/color_palette.py
+
+SPOTIFY_GREEN = '#1DB954'
+SPOTIFY_BLACK = '#191414'
+SPOTIFY_WHITE = '#FFFFFF'

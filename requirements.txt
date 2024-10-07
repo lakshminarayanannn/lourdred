@@ -1,0 +1,7 @@
+streamlit
+spotipy
+requests
+python-dotenv
+pandas
+plotly
+pyinstaller
