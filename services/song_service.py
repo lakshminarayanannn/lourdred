@@ -23,10 +23,9 @@ class SongService:
             query.append(f'artist:{artist}')
         if genre:
             query.append(f'genre:{genre}')
-        # Note: Spotify's Search API does not support genre filtering directly for tracks.
-        # Genres can be used with recommendations or filter results manually.
 
-        search_query = ' '.join(query) if query else 'year:2000-2023'  # Default query to get recent songs
+
+        search_query = ' '.join(query) if query else 'year:2000-2023' 
 
         results = self.spotify_api.search_tracks(q=search_query, limit=limit, country=country)
         songs = []
@@ -36,8 +35,8 @@ class SongService:
                 name=item['name'],
                 artists=[artist['name'] for artist in item['artists']],
                 album=item['album']['name'],
-                genre=genre,  # Genre needs to be inferred or handled separately
-                danceability=None,  # To be filled if audio features are fetched
+                genre=genre, 
+                danceability=None,  
                 energy=None,
                 valence=None
             )
